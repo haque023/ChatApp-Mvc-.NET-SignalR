@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MessageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_messages">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="messageCode" Type="varchar" MaxLength="36" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chatText" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="sender" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="receiver" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="isDelete" Type="varchar" MaxLength="5" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="isActive" Type="varchar" MaxLength="5" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="isDeleteSender" Type="varchar" MaxLength="5" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="isDeleteReceiver" Type="varchar" MaxLength="5" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="createdAt" Type="datetime" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="senderName" Type="nvarchar" MaxLength="200" />
+    <Property Name="receiverName" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="MessageModelStoreContainer">
+    <EntitySet Name="tbl_messages" EntityType="Self.tbl_messages" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

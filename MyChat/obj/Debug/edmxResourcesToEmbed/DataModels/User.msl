@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ChatAppModelStoreContainer" CdmEntityContainer="UserEntities">
+    <EntitySetMapping Name="tbl_users">
+      <EntityTypeMapping TypeName="ChatAppModel.tbl_users">
+        <MappingFragment StoreEntitySet="tbl_users">
+          <ScalarProperty Name="userCode" ColumnName="userCode" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdAt" ColumnName="createdAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

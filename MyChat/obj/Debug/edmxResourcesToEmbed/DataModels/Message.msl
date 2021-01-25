@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MessageModelStoreContainer" CdmEntityContainer="ChatAppEntities">
+    <EntitySetMapping Name="tbl_messages">
+      <EntityTypeMapping TypeName="MessageModel.tbl_messages">
+        <MappingFragment StoreEntitySet="tbl_messages">
+          <ScalarProperty Name="receiverName" ColumnName="receiverName" />
+          <ScalarProperty Name="senderName" ColumnName="senderName" />
+          <ScalarProperty Name="messageCode" ColumnName="messageCode" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="chatText" ColumnName="chatText" />
+          <ScalarProperty Name="sender" ColumnName="sender" />
+          <ScalarProperty Name="receiver" ColumnName="receiver" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isDeleteSender" ColumnName="isDeleteSender" />
+          <ScalarProperty Name="isDeleteReceiver" ColumnName="isDeleteReceiver" />
+          <ScalarProperty Name="createdAt" ColumnName="createdAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

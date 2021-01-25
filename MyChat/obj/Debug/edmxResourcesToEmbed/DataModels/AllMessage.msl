@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="testModelStoreContainer" CdmEntityContainer="AllMessaageEntities">
+    <EntitySetMapping Name="AllMessages">
+      <EntityTypeMapping TypeName="testModel.AllMessage">
+        <MappingFragment StoreEntitySet="AllMessages">
+          <ScalarProperty Name="MessageCode" ColumnName="MessageCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ChatText" ColumnName="ChatText" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleteSender" ColumnName="IsDeleteSender" />
+          <ScalarProperty Name="IsDeleteReceiver" ColumnName="IsDeleteReceiver" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

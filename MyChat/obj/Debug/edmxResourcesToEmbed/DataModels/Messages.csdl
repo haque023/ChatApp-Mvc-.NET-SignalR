@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Messages" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_messages">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="messageCode" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="chatText" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sender" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="receiver" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="isDelete" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" annotation:StoreGeneratedPattern="None" DefaultValue="N" />
+    <Property Name="isActive" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="isDeleteSender" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" DefaultValue="N" />
+    <Property Name="isDeleteReceiver" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" DefaultValue="N" />
+    <Property Name="createdAt" Type="DateTime" Nullable="false" Precision="3" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="senderName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="receiverName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="ChatAppEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_messages" EntityType="Self.tbl_messages" />
+  </EntityContainer>
+</Schema>

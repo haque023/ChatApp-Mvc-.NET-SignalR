@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ChatAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="userCode" Type="varchar" MaxLength="36" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="firstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="lastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="isActive" Type="varchar" MaxLength="5" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="createdAt" Type="datetime" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityContainer Name="ChatAppModelStoreContainer">
+    <EntitySet Name="tbl_users" EntityType="Self.tbl_users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

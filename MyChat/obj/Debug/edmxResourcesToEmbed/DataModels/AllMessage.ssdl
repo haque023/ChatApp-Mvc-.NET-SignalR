@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="testModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AllMessages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="MessageCode" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChatText" Type="text" Nullable="false" />
+    <Property Name="Sender" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="Receiver" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="IsDelete" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IsActive" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IsDeleteSender" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IsDeleteReceiver" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="testModelStoreContainer">
+    <EntitySet Name="AllMessages" EntityType="Self.AllMessages" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

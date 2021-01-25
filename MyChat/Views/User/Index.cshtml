@@ -1,0 +1,121 @@
+﻿
+@{
+    Layout = null;
+    ViewBag.Title = "Index";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<style type="text/css">
+
+    .form-control {
+        border-style: none;
+        padding-left: 30px;
+    }
+
+    input:focus {
+        outline: none !important;
+        box-shadow: initial !important;
+    }
+
+    .input-group {
+        border-style: none;
+        border-bottom: 1px groove rgba(127, 0, 0,.1);
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+    }
+
+    i, svg {
+        opacity: .4;
+    }
+
+    .btn-info {
+        width: 120px;
+    }
+</style>
+
+<body>
+
+    <div ng-app="MyApp" class="container">
+        <div class="row" style="margin-top: 50px;">
+
+
+            <div ng-controller="userCtrl" class="col-md-6" style="text-align: left;padding:20px 30px 10px 20px !important;">
+                <div class="col-md-12 text-center">
+                    <h3 style="opacity:.6">  Sign Up </h3>
+                </div>
+                <div class="input-group" style="text-align: left; margin-top: 20px;">
+                    <span class="input-group-append">
+                        <i class="fa fa-user" style="font-size: 24px"></i>
+                    </span>
+
+                    <input type="text" class="form-control" placeholder="Your First Name" ng-model="firstName" />
+                </div>
+
+                <div class="input-group" style="text-align: left; margin-top: 20px;">
+                    <span class="input-group-append">
+                        <i class="fa fa-user" style="font-size: 24px"></i>
+                    </span>
+
+                    <input type="text" class="form-control" placeholder="Your Last Name" ng-model="lastName" />
+                </div>
+
+
+                <div class="input-group" style="text-align: left; margin-top: 20px;">
+                    <span class="input-group-append">
+                        <i class="fa fa-envelope" style="font-size: 24px"> </i>
+                    </span>
+
+                    <input type="text" class="form-control" placeholder="Your Email" ng-model="email" />
+
+                </div>
+
+
+                <div class="col-md-12" style="text-align: center;  margin-top:40px; ">
+
+                    <button type="button" class="btn btn-info" ng-click="InsertUser()"> <h6>Sign-Up</h6> </button>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+            <div class="col-md-6" style="text-align: left; padding:20px 30px 10px 20px !important;">
+
+                <div class="col-md-12 text-center">
+                    <h3 style="opacity:.6">  Sign In </h3>
+                </div>
+                @using (Html.BeginForm("SignIn", "User", FormMethod.Post))
+                {
+                    <div class="input-group" style="text-align: left; margin-top: 20px;">
+                        <span class="input-group-append">
+                            <i class="fa fa-envelope" style="font-size: 24px"> </i>
+                        </span>
+
+                        <input type="text" class="form-control" placeholder="Your Email" name="email" id="email" />
+
+                    </div>
+
+                    <div class="col-md-12" style="text-align: center; margin-top:40px;">
+
+                        <button type="submit" class="btn btn-success"> <h6>Sign-In</h6> </button>
+
+                    </div>
+                }
+            </div>
+
+
+
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+
+        <script src="~/Scripts/angular.js"></script>
+        <script src="~/Scripts/ChatApp.js"></script>
+    </div>
+</body>
